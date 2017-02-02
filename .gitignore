@@ -1,0 +1,7 @@
+deployment-issue/myProcessV1/.classpath
+deployment-issue/myProcessV2/.settings/*
+deployment-issue/myProcessV2/.project
+*/.settings/*
+deployment-issue/myProcessV1/.settings/*
+deployment-issue/myProcessV1/.project
+*.classpath

@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<bpmn:definitions xmlns:bpmn="http://www.omg.org/spec/BPMN/20100524/MODEL" xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI" xmlns:di="http://www.omg.org/spec/DD/20100524/DI" xmlns:dc="http://www.omg.org/spec/DD/20100524/DC" xmlns:camunda="http://camunda.org/schema/1.0/bpmn" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="Definitions_1" targetNamespace="http://bpmn.io/schema/bpmn" exporter="Camunda Modeler" exporterVersion="1.1.1">
+  <bpmn:process id="myProcess" name="My Process V1" isExecutable="true" camunda:versionTag="My Version Tag 1">
+    <bpmn:startEvent id="StartEvent_1">
+      <bpmn:outgoing>SequenceFlow_0lqwhcv</bpmn:outgoing>
+    </bpmn:startEvent>
+    <bpmn:sequenceFlow id="SequenceFlow_0lqwhcv" sourceRef="StartEvent_1" targetRef="UserTask_12utr1v" />
+    <bpmn:endEvent id="EndEvent_0q2gq62">
+      <bpmn:incoming>SequenceFlow_1iopyeo</bpmn:incoming>
+    </bpmn:endEvent>
+    <bpmn:sequenceFlow id="SequenceFlow_1iopyeo" sourceRef="UserTask_12utr1v" targetRef="EndEvent_0q2gq62" />
+    <bpmn:userTask id="UserTask_12utr1v" name="MyTask" camunda:assignee="spieker">
+      <bpmn:incoming>SequenceFlow_0lqwhcv</bpmn:incoming>
+      <bpmn:outgoing>SequenceFlow_1iopyeo</bpmn:outgoing>
+    </bpmn:userTask>
+  </bpmn:process>
+  <bpmndi:BPMNDiagram id="BPMNDiagram_1">
+    <bpmndi:BPMNPlane id="BPMNPlane_1" bpmnElement="myProcess">
+      <bpmndi:BPMNShape id="_BPMNShape_StartEvent_2" bpmnElement="StartEvent_1">
+        <dc:Bounds x="173" y="102" width="36" height="36" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNEdge id="SequenceFlow_0lqwhcv_di" bpmnElement="SequenceFlow_0lqwhcv">
+        <di:waypoint xsi:type="dc:Point" x="209" y="120" />
+        <di:waypoint xsi:type="dc:Point" x="489" y="120" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="190" y="110" width="90" height="20" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNShape id="EndEvent_0q2gq62_di" bpmnElement="EndEvent_0q2gq62">
+        <dc:Bounds x="797" y="102" width="36" height="36" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="770" y="138" width="90" height="20" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNEdge id="SequenceFlow_1iopyeo_di" bpmnElement="SequenceFlow_1iopyeo">
+        <di:waypoint xsi:type="dc:Point" x="589" y="120" />
+        <di:waypoint xsi:type="dc:Point" x="797" y="120" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="549" y="110" width="90" height="20" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNShape id="UserTask_12utr1v_di" bpmnElement="UserTask_12utr1v">
+        <dc:Bounds x="489" y="80" width="100" height="80" />
+      </bpmndi:BPMNShape>
+    </bpmndi:BPMNPlane>
+  </bpmndi:BPMNDiagram>
+</bpmn:definitions>
